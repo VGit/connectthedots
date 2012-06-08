@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5"
-         xmlns="http://java.sun.com/xml/ns/javaee">
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+version="2.5"
+xmlns="http://java.sun.com/xml/ns/javaee">
 
-  <!-- Servlets -->
-  
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>WEB-INF/jsp/index.jsp</welcome-file>
-  </welcome-file-list>
+	<!-- Servlets -->
+	<servlet-mapping>
+		<servlet-name>signIn</servlet-name>
+		<url-pattern>/signIn</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>signIn</servlet-name>
+		<servlet-class>com.connectthedots.servlets.SignInServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>oauth</servlet-name>
+		<url-pattern>/oauth</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>oauth</servlet-name>
+		<servlet-class>com.connectthedots.servlets.OauthCallBackServlet</servlet-class>
+	</servlet>
+	<!-- Default page to serve -->
 
+	<welcome-file-list>
+		<welcome-file>WEB-INF/jsp/index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

@@ -5,7 +5,7 @@
 <title>iCareer</title>
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key: szjhpz02hlso
-  authorize: false
+  authorize: true
 </script>
 </head>
 <body>
@@ -30,15 +30,15 @@
 				</ul>
 			</div>
 		</div>
-		<script type="IN/Login">
-		<form action="/register" method="POST">
-		<p>User Name: <input type="text" name="userName" /></p>
+	<!-- 	<script type="IN/Login"> -->
+		<form action="/oauth" method="GET">
+<%-- 		<p>User Name: <input type="text" name="userName" /></p>
 		<p>Your Password: <input type="password" name="password" /></p>
 		<p>Your Name: <input type="text" name="name" value="<?js= firstName ?> <?js= lastName ?>" /></p>
 		<input type="hidden" name="linkedin-id" value="<?js= id ?>" />
-		<input type="submit" name="submit" value="Sign Up"/>
+ --%>		<input type="submit" name="submit" value="LinkedIn Sign In"/>
 		</form>
-		</script>
+		<!-- </script> -->
 	</div>
 </body>
 </html>
